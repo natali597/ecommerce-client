@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 
 const ProductScreen = () => {
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.card.value);
 
   const [product, setProduct] = useState({});
   const { id } = useParams();
@@ -23,7 +22,7 @@ const ProductScreen = () => {
       setProduct(data);
     };
     fetchProduct();
-  }, []);
+  }, [id]);
 
   const addToCart = () => {
     dispatch(add({ id: id, name: product.name, image: product.image }));
