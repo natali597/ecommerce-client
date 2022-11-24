@@ -6,7 +6,6 @@ import Raiting from "../components/Raiting";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { add } from "../featuers/card";
-import { useSelector } from "react-redux";
 
 const ProductScreen = () => {
   const dispatch = useDispatch();
